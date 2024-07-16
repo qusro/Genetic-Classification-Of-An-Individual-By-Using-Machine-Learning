@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        #content {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .centered-result {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Genetic Classification</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/Prediction">Prediction</a>
+        </nav>
+    </header>
+    <div id="content">
+        <img src="../static/img2.png" alt="Result">
+        <div class="centered-result">
+            {% if predict %}
+            <h2>Prediction Result: {{ predict }}</h2>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

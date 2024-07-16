@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Genetic Classification</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/Prediction">Prediction</a>
+        </nav>
+    </header>
+    <div id="content">
+        <h2>Welcome to Genetic Classification</h2>
+        <p>Explore the world of genetics and how it affects inheritance.</p>
+        <div id="about-content" style="display: none;">
+            <p>Genetic algorithms are optimization techniques inspired by natural evolution. They use operations like selection, crossover and mutation to evolve a population of potential solutions. Each individual in the population represents a possible solution and is assigned a fitness value based on the problem being solved.</p>
+        </div>
+        <img src="../static/about.jpg" alt="About">
+    </div>
+    <script>
+        document.querySelector('a[href="/about"]').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('about-content').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
