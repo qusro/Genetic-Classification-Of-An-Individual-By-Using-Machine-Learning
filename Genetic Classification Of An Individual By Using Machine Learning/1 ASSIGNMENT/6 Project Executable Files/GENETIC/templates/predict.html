@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        #content {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .centered-form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+        label {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Genetic Classification</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/Prediction">Prediction</a>
+        </nav>
+    </header>
+    <div id="content">
+        <img src="../static/img1.jpg" alt="Prediction">
+        <div class="centered-form">
+            <form action="/Prediction" method="POST">
+                <h2>Predict Genetic Traits</h2>
+                <label for="X1">X1:</label>
+                <input type="text" id="X1" name="X1"><br>
+                <label for="X2">X2:</label>
+                <input type="text" id="X2" name="X2"><br>
+                <label for="X3">X3:</label>
+                <input type="text" id="X3" name="X3"><br>
+                <label for="X4">X4:</label>
+                <input type="text" id="X4" name="X4"><br>
+                <label for="X5">X5:</label>
+                <input type="text" id="X5" name="X5"><br>
+                <input type="submit" value="Predict">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
